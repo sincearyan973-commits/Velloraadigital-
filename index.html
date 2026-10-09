@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080910">
+  <meta name="description" content="VelloraaDigital helps ambitious brands grow through digital marketing, creative strategy, branding, and web experiences.">
+  <title>VelloraaDigital — Strategy. Creativity. Growth.</title>
+  <style>
+    :root{--bg:#080910;--panel:#10111c;--panel2:#0c0d16;--line:#29283d;--text:#f7f5ff;--muted:#b7b3ca;--purple:#8d35ff;--purple2:#b06aff;--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}
+    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav{position:sticky;top:0;z-index:10;background:rgba(8,9,16,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07)}
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:11px;font-size:1.18rem;font-weight:850;letter-spacing:-.04em;white-space:nowrap}
+    .brand-mark{display:grid;place-items:center;width:39px;height:39px;background:linear-gradient(135deg,#c18aff,#6b20f5);clip-path:polygon(0 0,42% 0,52% 35%,67% 0,100% 0,62% 100%,42% 100%);color:transparent}
+    .brand span span{color:var(--purple2)}.brand small{display:block;font-size:.53rem;letter-spacing:.2em;color:#a7a1bb;font-weight:600;margin-top:-3px}
+    .nav-links{display:flex;align-items:center;gap:27px;color:#e3dfef;font-size:.88rem}
+    .nav-links a:hover{color:var(--purple2)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:12px 20px;font-weight:750;font-size:.88rem;background:linear-gradient(110deg,#7624f6,#a13dff);box-shadow:0 8px 30px #7021f533;transition:transform .2s,filter .2s}
+    .nav-cta:hover,.btn:hover{transform:translateY(-2px);filter:brightness(1.12)}
+    .btn-outline{background:transparent;border:1px solid #9d4dff;box-shadow:none}.menu-btn{display:none;background:transparent;color:white;border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+    .hero{position:relative;overflow:hidden;border-bottom:1px solid #20172f;background:radial-gradient(ellipse at 78% 35%,#41117866,transparent 38%),linear-gradient(115deg,#0a0b12 30%,#10091d 100%)}
+    .hero:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:#8529ff20;filter:blur(100px);right:3%;top:0;pointer-events:none}
+    .hero-grid{min-height:535px;display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:32px;padding-top:48px;padding-bottom:50px;position:relative;z-index:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:#c69aff;font-size:.76rem;letter-spacing:.12em;font-weight:800;text-transform:uppercase}
+    .eyebrow:before{content:"";width:22px;height:2px;background:var(--purple2)}
+    h1{font-size:clamp(2.6rem,5.1vw,4.55rem);line-height:1.04;letter-spacing:-.055em;margin:20px 0}
+    .gradient-text{background:linear-gradient(90deg,#9d4dff,#d1a1ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-copy{max-width:550px;color:#c7c3d5;font-size:1.05rem}
+    .hero-points{display:flex;flex-wrap:wrap;gap:18px;margin:25px 0 30px;color:#e6e1f3;font-size:.85rem}
+    .hero-points span:before{content:"✓";display:inline-grid;place-items:center;width:19px;height:19px;border:1px solid #a35bff;color:#cba2ff;border-radius:50%;margin-right:8px;font-size:.72rem}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}.hero-visual{min-height:390px;position:relative;display:grid;place-items:center}
+    .visual-glow{position:absolute;inset:12% 4%;background:radial-gradient(ellipse,#7a20df55,transparent 68%);filter:blur(18px)}
+    .visual-card{position:relative;width:min(100%,480px);min-height:320px;border:1px solid #6d4b91;border-radius:24px;padding:28px;background:linear-gradient(145deg,#171323,#090a12 70%);box-shadow:0 30px 90px #0009,0 0 50px #7a2edb22;transform:perspective(900px) rotateY(-5deg) rotateX(2deg)}
+    .visual-top{display:flex;justify-content:space-between;align-items:center;color:#aaa4bf;font-size:.75rem}
+    .live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#a96aff;box-shadow:0 0 12px #a96aff;margin-right:7px}
+    .visual-logo{display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:210px;text-align:center}
+    .big-v{font-size:5.3rem;line-height:1;font-weight:950;letter-spacing:-.1em;color:#b77aff;text-shadow:0 0 38px #862dff88}
+    .visual-logo strong{font-size:1.7rem;letter-spacing:-.05em}.visual-logo strong span{color:#b77aff}
+    .visual-logo p{font-size:.82rem;color:#bcb6ce;margin:8px 0}
+    .visual-bottom{display:flex;justify-content:space-between;gap:8px;border-top:1px solid #30283d;padding-top:15px;color:#aaa4bf;font-size:.72rem}
+    .float-note{position:absolute;right:-2%;top:12%;background:#14111f;border:1px solid #493164;border-radius:14px;padding:13px 16px;box-shadow:0 15px 40px #0006;font-size:.8rem;transform:rotate(4deg)}
+    .float-note b{display:block;color:#c89aff;font-size:1rem}
+    section{padding:84px 0}.section-head{max-width:660px;margin-bottom:35px}.section-head.center{text-align:center;margin-inline:auto}
+    .section-head h2{font-size:clamp(2rem,3.6vw,3rem);letter-spacing:-.045em;line-height:1.12;margin:12px 0}
+    .section-head p{color:var(--muted);margin:0}
+    .services-layout{display:grid;grid-template-columns:.75fr 1.5fr;gap:45px;align-items:start}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{background:linear-gradient(145deg,#11121d,#0b0c14);border:1px solid var(--line);border-radius:16px;padding:22px;transition:transform .2s,border-color .2s}
+    .card:hover{transform:translateY(-4px);border-color:#7143a2}
+    .service-icon{display:grid;place-items:center;width:43px;height:43px;border-radius:13px;background:#7c35d52a;border:1px solid #7b48a455;color:#cda7ff;font-size:1.25rem;margin-bottom:16px}
+    .card h3{font-size:1rem;margin:0 0 8px}.card p{font-size:.86rem;color:var(--muted);margin:0}
+    .service-intro p{color:var(--muted);margin:15px 0 25px}
+    .work{background:linear-gradient(110deg,#0b0b14,#11091c 60%,#0b0b14);border-block:1px solid #251632}
+    .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project-art{height:170px;border-radius:12px;display:flex;align-items:end;padding:20px;overflow:hidden;position:relative}
+    .project-art:before,.project-art:after{content:"";position:absolute;border-radius:50%;filter:blur(1px)}
+    .art-one{background:linear-gradient(135deg,#22132c,#a45b88)}.art-one:before{width:180px;height:180px;background:#ffb3cb44;right:-20px;top:-25px}.art-two{background:linear-gradient(135deg,#101d3a,#386ac2)}.art-two:before{width:220px;height:160px;background:#81b8ff33;right:-35px;top:5px;border-radius:35%}.art-three{background:linear-gradient(135deg,#190e2d,#5830a0)}.art-three:before{width:140px;height:140px;background:#a36aff55;right:25px;top:-35px}
+    .project-art span{position:relative;z-index:1;font-size:1.3rem;font-weight:900;letter-spacing:-.04em;text-shadow:0 2px 20px #0008}
+    .project-card{padding:10px}.project-card h3{margin:15px 10px 5px}.project-card p{margin:0 10px 12px;font-size:.83rem;color:var(--muted)}.project-label{display:inline-block;margin:0 10px 10px;color:#c89aff;font-size:.72rem}
+    .note{font-size:.78rem;color:#a9a3ba;margin-top:18px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about-art{min-height:340px;border:1px solid #3a2452;border-radius:22px;background:radial-gradient(ellipse at 70% 25%,#7d30c755,transparent 45%),linear-gradient(145deg,#161222,#080910);display:grid;place-items:center;position:relative;overflow:hidden}
+    .orbit{width:210px;height:210px;border:1px solid #8f52c977;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 60px #812dff1f}
+    .orbit-inner{width:145px;height:145px;border:1px solid #8f52c955;border-radius:50%;display:grid;place-items:center;color:#c39aff;font-size:4rem;font-weight:900}
+    .about-tag{position:absolute;padding:10px 14px;background:#15101f;border:1px solid #3b2b50;border-radius:12px;font-size:.8rem}.tag-a{top:13%;left:7%}.tag-b{right:6%;bottom:15%}
+    .about-copy p{color:var(--muted)}.values{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:25px}
+    .value{border-top:1px solid var(--line);padding-top:14px}.value b{display:block;margin-bottom:4px}.value span{font-size:.83rem;color:var(--muted)}
+    .contact{background:linear-gradient(120deg,#0b0b13,#130a20);border-top:1px solid #2a183b}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px}
+    .contact-info p{color:var(--muted)}.contact-line{display:flex;gap:12px;align-items:center;margin-top:18px;color:#e4dff1}.contact-line i{font-style:normal;color:#c59aff;font-size:1.1rem;width:38px;height:38px;border:1px solid #543575;border-radius:12px;display:grid;place-items:center}
+    form{padding:25px;border:1px solid var(--line);background:#0b0c15;border-radius:18px;display:grid;gap:14px}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:block;font-size:.8rem;color:#c8c2d9;margin-bottom:6px}
+    input,textarea,select{width:100%;border:1px solid #302d43;background:#11121d;color:#fff;padding:12px 13px;border-radius:9px;outline:none}
+    input:focus,textarea:focus,select:focus{border-color:#9d53ed}textarea{min-height:110px;resize:vertical}
+    .form-hint{font-size:.75rem;color:#9992ad;margin:0}
+    footer{padding:25px 0;border-top:1px solid #242032;color:#a7a1b9;font-size:.8rem}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-links{display:flex;gap:17px}.footer-links a:hover{color:#c99aff}
+    .small-brand{font-size:1rem}.small-brand .brand-mark{width:29px;height:29px}
+    @media(max-width:900px){.nav-links{gap:15px}.nav-cta{display:none}.hero-grid{grid-template-columns:1fr 1fr}.service-grid{grid-template-columns:repeat(2,1fr)}.services-layout{grid-template-columns:1fr;gap:25px}.project-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:680px){.container{width:min(var(--max),calc(100% - 30px))}.nav-inner{height:68px}.menu-btn{display:block}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 22px 22px;background:#0b0b14;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:4px}.nav-links.open{display:flex}.nav-links a{padding:10px 5px}.hero-grid{grid-template-columns:1fr;padding-top:58px;gap:15px}.hero-visual{min-height:310px}.visual-card{min-height:275px;padding:22px}.visual-logo{min-height:165px}.float-note{right:0;top:2%}section{padding:62px 0}.service-grid,.project-grid{grid-template-columns:1fr}.project-art{height:190px}.about-grid,.contact-grid{grid-template-columns:1fr;gap:30px}.about-art{min-height:290px}.form-row{grid-template-columns:1fr}.footer-inner{flex-direction:column;align-items:flex-start}.hero-points{gap:10px}.hero-points span{font-size:.78rem}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="VelloraaDigital home"><span class="brand-mark">V</span><span>Velloraa<span>Digital</span><small>STRATEGY · CREATIVITY · GROWTH</small></span></a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Open navigation">☰</button>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Get a Free Strategy Call ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Digital marketing agency</span>
+          <h1>We Turn Ideas Into <span class="gradient-text">Digital Growth</span></h1>
+          <p class="hero-copy">VelloraaDigital helps brands grow online with thoughtful strategy, creative content, and digital experiences that move your business forward.</p>
+          <div class="hero-points"><span>More visibility</span><span>Better engagement</span><span>Smarter growth</span></div>
+          <div class="actions"><a class="btn" href="#contact">Work With Us <span>→</span></a><a class="btn btn-outline" href="#portfolio">Explore Our Work</a></div>
+        </div>
+        <div class="hero-visual" aria-label="VelloraaDigital brand preview">
+          <div class="visual-glow"></div>
+          <div class="visual-card">
+            <div class="visual-top"><span><i class="live-dot"></i>YOUR DIGITAL GROWTH PARTNER</span><span>✦</span></div>
+            <div class="visual-logo"><div class="big-v">V</div><strong>Velloraa<span>Digital</span></strong><p>Digital Marketing&nbsp; · &nbsp;Branding&nbsp; · &nbsp;Growth</p></div>
+            <div class="visual-bottom"><span>STRATEGY FIRST</span><span>CREATIVITY ALWAYS</span><span>GROWTH MINDED</span></div>
+          </div>
+          <div class="float-note">Make your next move count<b>Ideas → Impact</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container services-layout">
+        <div class="service-intro">
+          <span class="eyebrow">What we do</span>
+          <div class="section-head"><h2>Everything You Need to Grow <span class="gradient-text">Online</span></h2><p>Digital solutions designed to help your brand connect with the right people and build lasting momentum.</p></div>
+          <a class="btn btn-outline" href="#contact">Discuss Your Goals →</a>
+        </div>
+        <div class="service-grid">
+          <article class="card"><div class="service-icon">◉</div><h3>Social Media Marketing</h3><p>Build a consistent presence and create content your audience wants to engage with.</p></article>
+          <article class="card"><div class="service-icon">⌕</div><h3>SEO & Search</h3><p>Improve discoverability and help the right customers find your business online.</p></article>
+          <article class="card"><div class="service-icon">◎</div><h3>Paid Advertising</h3><p>Plan and optimize campaigns around your goals, audience, and budget.</p></article>
+          <article class="card"><div class="service-icon">✧</div><h3>Branding & Design</h3><p>Create a memorable visual identity and a clear, consistent brand voice.</p></article>
+          <article class="card"><div class="service-icon">⌘</div><h3>Website Development</h3><p>Build responsive digital experiences that make it easy to take the next step.</p></article>
+          <article class="card"><div class="service-icon">↗</div><h3>Content Strategy</h3><p>Turn useful ideas into purposeful content for every stage of the customer journey.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" id="portfolio">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">Selected work</span><h2>Creative Thinking. <span class="gradient-text">Real Potential.</span></h2><p>A preview of the kinds of projects VelloraaDigital can help bring to life.</p></div>
+        <div class="project-grid">
+          <article class="card project-card"><div class="project-art art-one"><span>FITLIFE / ACTIVE</span></div><h3>Fitness & Wellness</h3><p>Social content · Brand direction</p><span class="project-label">CONCEPT PROJECT</span></article>
+          <article class="card project-card"><div class="project-art art-two"><span>SKYLINE / SPACES</span></div><h3>Property & Real Estate</h3><p>Digital presence · Content strategy</p><span class="project-label">CONCEPT PROJECT</span></article>
+          <article class="card project-card"><div class="project-art art-three"><span>NOVA / EVERYDAY TECH</span></div><h3>Retail & E-commerce</h3><p>Campaign creative · Web experience</p><span class="project-label">CONCEPT PROJECT</span></article>
+        </div>
+        <p class="note">Portfolio visuals are illustrative concept projects, not claims of completed client work. Replace these with your real projects when ready.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-art"><div class="orbit"><div class="orbit-inner">V</div></div><div class="about-tag tag-a">✦ Strategy-led</div><div class="about-tag tag-b">Creative by nature ↗</div></div>
+        <div class="about-copy"><span class="eyebrow">About VelloraaDigital</span><div class="section-head"><h2>Your Partner in <span class="gradient-text">Digital Progress</span></h2><p>We believe good marketing starts with understanding people. VelloraaDigital brings strategy and creativity together to help businesses communicate clearly, show up consistently, and grow with purpose.</p></div><div class="values"><div class="value"><b>Purposeful strategy</b><span>Clear goals before busy work.</span></div><div class="value"><b>Creative thinking</b><span>Ideas shaped around your brand.</span></div><div class="value"><b>Open communication</b><span>Collaborative, straightforward work.</span></div><div class="value"><b>Continuous learning</b><span>Improve, test, and adapt.</span></div></div></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info"><span class="eyebrow">Get in touch</span><div class="section-head"><h2>Let's Build Something <span class="gradient-text">Great</span></h2><p>Have a project in mind? Tell us a little about your goals and let's explore what we can create together.</p></div>
+          <div class="contact-line"><i>✉</i><span><b>Email</b><br>Replace with your business email</span></div>
+          <div class="contact-line"><i>↗</i><span><b>WhatsApp</b><br>Connect your business number</span></div>
+          <div class="contact-line"><i>⌖</i><span><b>Working worldwide</b><br>Remote-friendly collaboration</span></div>
+        </div>
+        <form id="contactForm">
+          <div class="form-row"><div><label for="name">Your name *</label><input id="name" name="name" required placeholder="Name"></div><div><label for="email">Your email *</label><input id="email" name="email" type="email" required placeholder="you@example.com"></div></div>
+          <div class="form-row"><div><label for="business">Business / brand</label><input id="business" name="business" placeholder="Your business"></div><div><label for="service">What do you need?</label><select id="service" name="service"><option>Social media marketing</option><option>SEO</option><option>Paid advertising</option><option>Branding & design</option><option>Website development</option><option>Something else</option></select></div></div>
+          <div><label for="message">Tell us about your project *</label><textarea id="message" name="message" required placeholder="What would you like to achieve?"></textarea></div>
+          <button class="btn" type="submit" style="border:0;cursor:pointer">Prepare Email Enquiry →</button>
+          <p class="form-hint" id="formHint">This form opens your email app with your message. Add your real email address in the website code before publishing.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footer-inner"><a class="brand small-brand" href="#home"><span class="brand-mark">V</span><span>Velloraa<span>Digital</span><small>STRATEGY · CREATIVITY · GROWTH</small></span></a><span>© <span id="year"></span> VelloraaDigital. Built for growth.</span><div class="footer-links"><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a></div></div></footer>
+  <script>
+    const menuBtn=document.getElementById('menuBtn');
+    const navLinks=document.getElementById('navLinks');
+    menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰';});
+    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+    document.getElementById('contactForm').addEventListener('submit',function(e){
+      e.preventDefault();
+      const recipient='YOUR_EMAIL@example.com';
+      if(recipient==='YOUR_EMAIL@example.com'){document.getElementById('formHint').textContent='Before publishing: open index.html and replace YOUR_EMAIL@example.com with your real business email. Then this form will prepare an email enquiry.';return;}
+      const d=new FormData(this);
+      const body=`Name: ${d.get('name')}%0D%0AEmail: ${d.get('email')}%0D%0ABusiness: ${d.get('business')}%0D%0AService: ${d.get('service')}%0D%0A%0D%0A${d.get('message')}`;
+      window.location.href=`mailto:${recipient}?subject=${encodeURIComponent('VelloraaDigital website enquiry')}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
